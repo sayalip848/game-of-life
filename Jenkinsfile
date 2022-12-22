@@ -5,7 +5,6 @@ pipeline {
             customWorkspace '/mnt/project'
         }
     }		
-}
     stages {
         stage ('git') {
             steps {
