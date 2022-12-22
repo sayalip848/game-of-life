@@ -17,14 +17,8 @@ pipeline {
             }
         }
         stage ('deploy') {
-            agent {
-                label {
-                    label 'test'
-                    customWorkspace '/mnt/project'
-                }
-            }
             steps {
-                sh "cp -r gameoflife-web/target/gameoflife.war /mnt/install/apache-tomcat-9.0.70/webapps"
+                sh " scp -i ~/sample-kp1.pem gameoflife-web/target/gameoflife.war ec2-user@172.31.32.47:/mnt/install/apache-tomcat-9.0.70/webapps"
             }
         }
     }
