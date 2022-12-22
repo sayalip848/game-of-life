@@ -4,7 +4,8 @@ pipeline {
             label 'test'
             customWorkspace '/mnt/project'
         }
-    }		
+    }	
+    stages {
      stage ('complie') {
             steps {
                sh "mvn clean install"
