@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage ('git') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sayalip848/game-of-life.git']]])
+                git 'https://github.com/sayalip848/game-of-life.git'
             }
         }
         stage ('complie') {
