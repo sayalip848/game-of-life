@@ -7,6 +7,7 @@ pipeline {
     }		
 	tools {
  		 maven 'maven-install'
+		 git 'git'
   		}
     stages {
         stage ('git') {
