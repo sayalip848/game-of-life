@@ -5,13 +5,7 @@ pipeline {
             customWorkspace '/mnt/project'
         }
     }		
-    stages {
-        stage ('git') {
-            steps {
-                git 'https://github.com/sayalip848/game-of-life.git'
-            }
-        }
-        stage ('complie') {
+     stage ('complie') {
             steps {
                sh "mvn clean install"
             }
