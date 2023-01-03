@@ -17,6 +17,12 @@ stages {
 			sh "mvn clean install"
 		}
 	}
+	stage ('install-docker') {
+		steps {
+			sh "yum install docker -y"
+			sh "systemctl start docker"
+		}
+	}
 	stage ('image-container') {
 		steps {
 			sh "docker build -t tomcat:1.0"
