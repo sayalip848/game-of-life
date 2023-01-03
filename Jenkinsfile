@@ -13,9 +13,9 @@ stages {
 		}
 		steps {
 			sh "git clone https://github.com/sayalip848/game-of-life.git"
-			sh "git clone https://github.com/sayalip848/my-docker-compose.git"
 			sh "mvn clean install"
 			sh "sudo yum install docker -y"
+			sh "git clone https://github.com/sayalip848/my-docker-compose.git"
 			sh "sudo systemctl start docker"
 			sh "sudo docker-compose up -d"
 		}
@@ -28,9 +28,9 @@ stages {
 		}
 		steps {
 			sh "git clone https://github.com/sayalip848/game-of-life.git"
-			sh "git clone https://github.com/sayalip848/my-docker-compose.git"
 			sh "mvn clean install"
 			sh "sudo yum install docker -y"
+			sh "git clone https://github.com/sayalip848/my-docker-compose.git"
 			sh "sudo systemctl start docker"
 			sh "sudo docker-compose up -d"
 			}
