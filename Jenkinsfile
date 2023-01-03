@@ -19,8 +19,8 @@ stages {
 	}
 	stage ('install-docker') {
 		steps {
-			sh "yum install docker -y"
-			sh "systemctl start docker"
+			sh "sudo yum install docker -y"
+			sh "sudo systemctl start docker"
 		}
 	}
 	stage ('image-container') {
