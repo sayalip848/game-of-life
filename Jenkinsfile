@@ -7,6 +7,7 @@ pipeline {
 }
 tools {
 	mvn 'mvn-install'
+	git 'git'
 }
 stages {
 	stage ('git') {
