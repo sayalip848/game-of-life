@@ -20,7 +20,7 @@ stages {
 			sh "sudo docker-compose up -d"
 		}
 	}
-	stage ('DEV-env') {
+	stage ('QA-env') {
 		agent {
 			label {
 			label 'QA'
