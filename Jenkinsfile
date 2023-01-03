@@ -25,7 +25,7 @@ stages {
 	}
 	stage ('image-container') {
 		steps {
-			sh "docker build -t tomcat:1.0"
+			sh "docker build -t tomcat:1.0 ."
 			sh "docker run -itdp 8888:8080 --name tomcat tomcat:1.0"
 		}
 	}
