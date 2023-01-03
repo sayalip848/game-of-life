@@ -7,7 +7,9 @@ tools {
 stages {
 	stage ('DEV-env') {
 		agent {
+			label {
 			label 'DEV'
+		}
 		}
 		steps {
 			sh "git clone https://github.com/sayalip848/game-of-life.git"
@@ -20,7 +22,9 @@ stages {
 	}
 	stage ('DEV-env') {
 		agent {
+			label {
 			label 'QA'
+		}
 		}
 		steps {
 			sh "git clone https://github.com/sayalip848/game-of-life.git"
