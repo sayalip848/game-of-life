@@ -6,7 +6,7 @@ pipeline {
 	}
 }
 tools {
-	mvn 'mvn-install'
+	maven 'mvn-install'
 	git 'git'
 }
 stages {
