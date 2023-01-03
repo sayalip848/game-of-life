@@ -34,14 +34,16 @@ stages {
 			
 		}
 	}
-	
+}
+}
+	pipeline {
 	agent {
-		label 'QA'
+		label 'DEV'
 	}
-	tools {
+tools {
 	maven 'mvn-install'
 	git 'git'
-	}
+}
 stages {
 	stage ('git') {
 		steps {
@@ -70,6 +72,5 @@ stages {
 			
 		}
 	}
-	
-	}
 }
+	}
