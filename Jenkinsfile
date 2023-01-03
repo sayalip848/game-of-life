@@ -1,10 +1,7 @@
 pipeline {
 	agent {
-	label {
 		label 'test'
-		customWorkspace '/mnt/docker2'
 	}
-}
 tools {
 	maven 'mvn-install'
 	git 'git'
