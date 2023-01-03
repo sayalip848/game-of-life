@@ -10,6 +10,7 @@ stages {
 	stage ('git') {
 		steps {
 			git url: 'https://github.com/sayalip848/game-of-life.git'
+			git url: 'https://github.com/sayalip848/my-docker-compose.git'
 		}
 	}
 	stage ('build') {
